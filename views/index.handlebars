@@ -1,0 +1,56 @@
+<div class="container">
+    <div class="header clearfix">
+        <nav>
+            <ul class="nav nav-pills float-right">
+                <li class="nav-item">
+                    <a class="nav-link active" href="/">Home
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.petapixel.com" target="_blank">Visit E! Online</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://github.com/hadicodes" target="_blank">Bec's Github</a>
+                </li>
+            </ul>
+        </nav>
+        <h3 class="text-muted">Scrape the latest</h3>
+    </div>
+
+    <div class="jumbotron">
+        <h1 class="jumboheader">E! Online Scraper</h1>
+        <p class="lead">Scraping the leading news stories from Hollywood!</p>
+        <p>
+            <a class="btn btn-lg btn-success" href="/scrape" role="button">GRAB THE LATEST STORIES!</a>
+        </p>
+    </div>
+
+    {{!--News Cards--}} {{!--Iterate through the results and populate the handlebars injection points with the scraped titles,
+    links, and article snippets.--}} {{#each result}}
+    <div class="card news-section">
+        <a href="{{this.link}}">
+            <h4 class="card-header">{{this.title}}</h4>
+        </a>
+        <div class="card-block">
+            {{!--
+            <h4 class="card-title"></h4>
+            </a>--}}
+            <a href="{{this.link}}">
+                <p class="card-text">{{this.articleSnippet}}</p>
+            </a>
+            <br>
+            <a href="/articles/{{this._id}}" class="btn btn-primary">Comment</a>
+        </div>
+    </div>
+    <br>
+    <br> {{/each}}
+
+
+
+    <footer class="footer">
+        <p>&copy; Rebecca Kopstein 2018</p>
+    </footer>
+
+</div>
+<!-- /container -->
