@@ -4,7 +4,7 @@ var cheerio = require("cheerio");
 var Comment = require("../models/Note.js");
 var Article = require("../models/article.js");
 
-module.exports = function (app) {
+module.exports = db = function (app) {
 
     app
         .get('/', function (req, res) {
