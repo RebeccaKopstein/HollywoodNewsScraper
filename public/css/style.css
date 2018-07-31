@@ -1,10 +1,11 @@
 body {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
+    background: lightgrey;
   }
   
   
-  /* Everything but the jumbotron gets side spacing for mobile first views */
+
   
   .header,
   .marketing,
@@ -14,15 +15,15 @@ body {
   }
   
   
-  /* Custom page header */
+  ]
   
   .header {
     padding-bottom: 1rem;
-    border-bottom: .05rem solid #e5e5e5;
+    border-bottom: .05rem solid #1D1E18;
   }
   
   
-  /* Make the masthead heading the same height as the navigation */
+  
   
   .header h3 {
     margin-top: 0;
@@ -31,16 +32,16 @@ body {
   }
   
   
-  /* Custom page footer */
+
   
   .footer {
     padding-top: 1.5rem;
-    color: #777;
-    border-top: .05rem solid #e5e5e5;
+    color: #6B8F71;
+    border-top: .05rem solid #1D1E18;
   }
   
   
-  /* Customize container */
+
   
   @media (min-width: 48em) {
     .container {
@@ -53,72 +54,71 @@ body {
   }
   
   h4.card-header {
-    font-family: Camphor, Open Sans, Segoe UI, sans-serif;
-    color: #5E5E5F;
+    font-family: 'Palanquin Dark', sans-serif;
+    color: #6B8F71;
   }
   
   p.card-text {
-    font-family: Camphor, Open Sans, Segoe UI, sans-serif;
-    color: #6b7c93;
+    font-family: 'Palanquin Dark', sans-serif;
+    color: #D9FFF5;
   }
   
   a.btn.btn-primary:hover {
-    color: #fff;
+    color: #B9F5D9;
     transform: translateY(-4px);
-    box-shadow: 0 7px 14px rgba(50, 50, 93, .1), 0 3px 6px rgba(0, 0, 0, .08);
+    box-shadow: 0 7px 14px #1D1E18, 0 3px 6px #AAD2BA;
   }
   
   a.btn.btn-primary--default {
-    color: #fff;
-    background: #6772e5;
+    color: #6B8F71;
+    background: #AAD2BA;
   }
   
   
-  /* Main marketing message and sign up button */
+ 
   
   h1.display-3 {
-    font-family: Camphor, Open Sans, Segoe UI, sans-serif;
-    color: #32325d;
+    font-family: 'Palanquin Dark', sans-serif;
+    color: #AAD2BA;
   }
   
   .jumbotron {
     text-align: center;
-    border-bottom: .05rem solid #e5e5e5;
-    /*background: linear-gradient( rgba(20, 20, 20, .5), rgba(20, 20, 20, 0.4)), url("/img/burning.jpg");*/
-    /*background-size: cover;*/
+    border-bottom: .05rem solid #D9FFF5;
+   
   }
   
   div.jumbotron {
-    background: rgba(236, 240, 245, 0.68);
+    background: #B9F5D8;
   }
   
   a.btn.btn-lg.btn-success {
-    color: #7795f8;
+    color: #AAD2BA;
     transform: translateY(-1px);
-    box-shadow: 0 7px 14px rgba(50, 50, 93, .1), 0 3px 6px rgba(0, 0, 0, .08);
+    box-shadow: 0 7px 14px #6B8F71;
   }
   
   a.btn.btn-lg.btn-success {
     height: 40px;
     line-height: 40px;
     padding: 0 14px;
-    background: #fff;
+    background: #6B8F71;
     border-radius: 4px;
-    border-color: ivory;
-    font-family: Camphor, Open Sans, Segoe UI, sans-serif;
+    border-color: #D9FFF5;
+    font-family: 'Palanquin Dark', sans-serif;
     font-size: 18px;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: .025em;
-    color: #6772e5;
+    color: #AAD2BA;
     text-decoration: none;
     transition: all .15s ease;
   }
   
   a.nav-link.active,
   .nav-pills .nav-link.active {
-    color: #fff;
-    background-color: #43458b;
+    color: #d9fff5;
+    background-color: #6B8F71;
   }
   
   
@@ -126,24 +126,24 @@ body {
   
   }
   .jumboheader {
-    color: #3274ff
+    color: #1D1E18;
   }
   .jumbotron .btn {
     padding: .75rem 1.5rem;
     font-size: 1.5rem;
   }
   .btn-primary {
-    color: #fff;
-    background-color: #6772e5;
-    border-color: #6772e5;
+    color: #D9FFF5;
+    background-color: #6B8F71;
+    border-color: #B9F5D8;
   }
   .btn-primary:hover {
-    color: #fff;
-    background-color: #7795f8;
-    border-color: #7795f8;
+    color: #D9FFF5;
+    background-color: #6B8F71;
+    border-color: #B9F5D8;
   }
   
-  /* Supporting marketing content */
+  
   .marketing {
     margin: 3rem 0;
   }
@@ -151,20 +151,20 @@ body {
     margin-top: 1.5rem;
   }
   
-  /* Responsive: Portrait tablets and up */
+
   @media screen and (min-width: 48em) {
-    /* Remove the padding we set earlier */
+ \
     .header,
     .marketing,
     .footer {
       padding-right: 0;
       padding-left: 0;
     }
-    /* Space out the masthead */
+   
     .header {
       margin-bottom: 2rem;
     }
-    /* Remove the bottom border on the jumbotron for visual effect */
+    
     .jumbotron {
       border-bottom: 0;
     }
