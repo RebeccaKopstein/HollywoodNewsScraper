@@ -6,8 +6,7 @@ var Article = require("../models/article.js");
 
 module.exports = db = function (app) {
 
-    app
-        .get('/', function (req, res) {
+    app.get('/', function (req, res) {
             res.redirect('/articles');
         });
 
@@ -17,35 +16,35 @@ module.exports = db = function (app) {
 
             var $ = cheerio.load(html);
 
-            $(".category-landing").each(function (i, element) {
+            $(".category-landing__content-item").each(function (i, element) {
 
                 var title = $(this)
+                // firstChild.data
+                    .children("div")
+                    .children("div")
                     .children("h2")
-                    .children("a")
                     .text();
                 var link = $(this)
-                    .children("h2")
-                    .children("a")
+                    .children("div")
                     .attr("href");
-                var articleSnippet = $(this)
-                    .children("div.text")
-                    .text();
-
-                if (title && link && articleSnippet) {
-
+                var image= $(this)
+                .children("img")
+                .attr("src")
+console.log(title)
+                if (title && link && imgage) {
+                   
                     var result = {};
 
 
                     result.title = title;
                     result.link = link;
-                    result.articleSnippet = articleSnippet;
+                    result.image = image;
 
-
+// console.log(result)
                     Article.create(result, function (err, doc) {
 
                         if (err) {
-                            console.log(err
-                            );
+                            console.log(err);
                         } else {
                             console.log(doc);
                         }
@@ -67,7 +66,7 @@ module.exports = db = function (app) {
                     console.log(error
                     );
                 } else {
-                    res.render("index", { result: doc });
+                    res.render("index", { doc });
                 }
 
             })

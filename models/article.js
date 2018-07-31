@@ -12,20 +12,20 @@ var ArticleSchema = new Schema({
     },
 
     link: {
-        type: String,
-        required: true,
+        type: String
+        // required: true,
 
     },
 
     articleSnippet: {
-        type: String,
-        required: true,
+        type: String
+        // required: true,
 
     },
 
     note: {
-        type: Schema.Types.ObjectId,
-        required: true
+        type: Schema.Types.ObjectId
+        // required: true
     }
 
 });
