@@ -1,9 +1,10 @@
 $(document).ready(function () {
-    $('.delete-button').on('click', function (e) {
+    $(document).on('click','.submit', function (e) {
         e.preventDefault();
-        var qURL = location.href + '/' + $(this).data('note');
+        var qURL = location.href + '/';
+        console.log(qURL)
         $.ajax({
-            method: "DELETE",
+            method: "GET",
             url: qURL
         })
         location.reload();

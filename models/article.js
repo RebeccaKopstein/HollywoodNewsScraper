@@ -23,10 +23,10 @@ var ArticleSchema = new Schema({
 
     // },
 
-    note: {
+    note:[ {
         type: Schema.Types.ObjectId,
         required: true
-    }
+    }]
 
 });
 
