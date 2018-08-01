@@ -1,7 +1,7 @@
 var request = require("request");
 var cheerio = require("cheerio");
 
-var Comment = require("../models/Note.js");
+var Note = require("../models/Note.js");
 var Article = require("../models/article.js");
 
 module.exports = db = function (app) {
@@ -78,7 +78,7 @@ console.log(title)
 
         Article.findOne({ "_id": req.params.id })
 
-            .populate("comment")
+            .populate("note")
 
             .exec(function (error, doc) {
 
@@ -95,7 +95,7 @@ console.log(title)
 
     app.post("/articles/:id", function (req, res) {
 
-        Comment
+        Note
             .create(req.body, function (error, doc) {
 
                 if (error) {
@@ -107,7 +107,7 @@ console.log(title)
                         "_id": req.params.id
                     }, {
                             $push: {
-                                "comment": doc._id
+                                "note": doc._id
                             }
                         }, {
                             safe: true,
@@ -128,9 +128,9 @@ console.log(title)
             });
     });
 
-    app.delete("/articles/:id/:commentid", function (req, res) {
-        Comment
-            .findByIdAndRemove(req.params.commentid, function (error, doc) {
+    app.delete("/articles/:id/:noteid", function (req, res) {
+        Note
+            .findByIdAndRemove(req.params.noteid, function (error, doc) {
 
                 if (error) {
                     console.log(error
@@ -141,7 +141,7 @@ console.log(title)
                         "_id": req.params.id
                     }, {
                             $pull: {
-                                "comment": doc._id
+                                "note": doc._id
                             }
                         })
 
