@@ -24,7 +24,7 @@ app.set('view engine', 'handlebars');
 app.use(express.static("public"));
 
 
-mongoose.connect("mongodb://localhost/news-scraper");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/news-scraper");
 var db = mongoose.connection;
 
 
