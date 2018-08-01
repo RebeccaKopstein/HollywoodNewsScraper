@@ -16,7 +16,7 @@ var ArticleSchema = new Schema({
         required: true
 
     },
-
+// ***image from the website to appear with the article link***
     // image: {
     //     type: img,
     //     required: true
