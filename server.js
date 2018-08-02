@@ -42,5 +42,5 @@ require("./controllers/articlesController.js")(app);
 
 
 app.listen(PORT, function () {
-    console.log("App running on port 8080");
+    console.log("App running on port " + PORT);
 });
