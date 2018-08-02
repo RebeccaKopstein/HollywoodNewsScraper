@@ -58,10 +58,10 @@ console.log(title)
 
 
     app.get("/articles", function (req, res) {
-
+console.log("RENDERING ARTICLES")
         Article
             .find({}, function (error, doc) {
-
+console.log(doc)
                 if (error) {
                     console.log(error
                     );
