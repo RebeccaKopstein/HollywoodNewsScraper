@@ -24,15 +24,17 @@ module.exports = db = function (app) {
                     .children("div")
                     .children("h2")
                     .text();
-                var link = $(this)
-                    .children("div")
+                    var link = "https://www.eonline.com" + $(this)
+                    .parent()
                     .attr("href");
                 var image= $(this)
                 .children("img")
                 .attr("src")
 console.log(title)
-                if (title && link && imgage) {
-                   
+console.log(link)
+console.log(image)
+                if (title && link && image) {
+                    console.log("happy day")
                     var result = {};
 
 
